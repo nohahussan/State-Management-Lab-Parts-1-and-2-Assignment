@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Menu";
+}
+
+<h3>Welcome Please select items from this menu</h3>
+
+
+
+    <table class="table">
+        <tr>
+            <th>Item</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th></th>
+
+        </tr>
+        @foreach (var item in ViewBag.ItemsList)
+        {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Derscription</td>
+            <td>@item.Price</td>
+            <td><a href="/Home/AddItem?itemName=@item.Name">Add Item to Cart</a></td>
+            
+        </tr>
+        }
+    </table>
+    <div>
+        <ul>
+            <li>
+                @Html.ActionLink("ReviewCart", "ReviewCart", "Home")
+            </li>
+            <li>
+                @Html.ActionLink(" Logout", "Logout", "Home")
+            </li>
+
+        </ul>
+
+    </div>
+
+

@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Welcome to Tim Hortons</h2>
+
+<div>
+    <ul>
+        <li>
+            @Html.ActionLink("Register Here!", "Registeration", "Home")
+        </li>
+        @if (ViewBag.enter == "enter")
+        {
+        <li> @Html.ActionLink("Start Shopping!", "Menu", "Home")</li>
+
+        }
+
+
+
+    </ul>
+
+
+</div>
+
+

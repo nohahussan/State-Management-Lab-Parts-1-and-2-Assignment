@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "ReviewCart";
+}
+
+<h2>ReviewCart</h2>
+
+
+@foreach (var item in ViewBag.Cart)
+{
+    <ul>
+
+        <li>
+            @item.Name
+        </li>
+    </ul>
+   
+}
